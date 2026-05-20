@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — AdHush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="wrap">
+        <div class="chip"><a href="index.html">← ADHUSH</a></div>
+
+        <h1>Privacy Policy</h1>
+        <p class="lead">Last updated: May 2026</p>
+
+        <div class="callout">
+            <strong>The short version:</strong> AdHush collects nothing. There is no account, no analytics SDK, no server we operate, no telemetry. Your DNS queries never reach us — they go straight from your device to your chosen upstream resolver.
+        </div>
+
+        <h2>1. Who we are</h2>
+        <p>AdHush ("we", "us", "the app") is a single-developer iOS application that blocks ads and trackers on your device. We can be reached at <a href="mailto:yuganshjain11@gmail.com">yuganshjain11@gmail.com</a>.</p>
+
+        <h2>2. What we collect</h2>
+        <p><strong>Nothing.</strong> AdHush has no account system, no remote servers we operate, and no analytics or crash-reporting SDKs. We do not log, store, or transmit:</p>
+        <ul>
+            <li>Your browsing history or DNS queries</li>
+            <li>Your IP address</li>
+            <li>Your device identifiers</li>
+            <li>Any behavioural data about your use of the app</li>
+        </ul>
+
+        <h2>3. What stays on your device</h2>
+        <p>The following data is stored locally on your iPhone, in an App Group container shared between the app and its VPN extension. None of it leaves your device:</p>
+        <ul>
+            <li><strong>Block count</strong> — a running tally of blocked DNS queries (an integer)</li>
+            <li><strong>Settings &amp; preferences</strong> — onboarding state, whitelist (if any)</li>
+            <li><strong>Subscription state</strong> — cached from Apple StoreKit, including whether your trial is active</li>
+        </ul>
+
+        <h2>4. Data that leaves your device</h2>
+        <p>AdHush operates a local VPN. When you visit a website or use an app:</p>
+        <ul>
+            <li>The DNS lookup for that domain enters the local VPN tunnel.</li>
+            <li>If the domain is on our blocklist, AdHush synthesises an NXDOMAIN response locally — the request never leaves your phone.</li>
+            <li>If the domain is allowed, AdHush forwards the DNS query to your upstream resolver (default: <strong>Cloudflare 1.1.1.1</strong>). AdHush itself does not see, log, or store the query.</li>
+            <li>Cloudflare's privacy policy applies to that forwarded traffic.</li>
+        </ul>
+        <p>All actual web traffic (HTTPS bodies, page content, app data) bypasses the AdHush tunnel entirely via <code>excludedRoutes</code>.</p>
+
+        <h2>5. App Store &amp; Subscriptions</h2>
+        <p>Subscriptions are handled by Apple. We do not receive your name, email, payment details, or any personal information from the App Store. Apple shares an anonymised receipt with the app, which we verify locally on your device.</p>
+
+        <h2>6. Diagnostics</h2>
+        <p>AdHush uses Apple's MetricKit only when you explicitly opt in via iOS Settings. This sends performance metrics (crash counts, energy usage) to Apple — not to us.</p>
+
+        <h2>7. Children</h2>
+        <p>AdHush is not directed at children under 13. We do not knowingly collect personal information from children — because we do not collect personal information from anyone.</p>
+
+        <h2>8. Your rights</h2>
+        <p>Under GDPR, CCPA, and other privacy regulations, you have rights to access, rectify, and erase personal data we hold about you. Since we hold no personal data about you, there is nothing to access, rectify, or erase. Uninstalling AdHush deletes all on-device storage immediately.</p>
+
+        <h2>9. Changes to this policy</h2>
+        <p>If we ever change this policy materially, we'll update the date above and announce the change in an in-app notification. We will never expand collection silently.</p>
+
+        <h2>10. Contact</h2>
+        <p>Questions about privacy? Email <a href="mailto:yuganshjain11@gmail.com">yuganshjain11@gmail.com</a>.</p>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </main>
+</body>
+</html>

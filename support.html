@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support &amp; FAQ — AdHush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="wrap">
+        <div class="chip"><a href="index.html">← ADHUSH</a></div>
+
+        <h1>Support &amp; FAQ</h1>
+        <p class="lead">Common questions, troubleshooting, and how to reach us.</p>
+
+        <div class="callout">
+            Can't find an answer here? Email <a href="mailto:yuganshjain11@gmail.com" style="color:#fff">yuganshjain11@gmail.com</a> — we reply within 1–2 business days.
+        </div>
+
+        <h2>Getting started</h2>
+        <h3>How do I turn on AdHush?</h3>
+        <p>Open the app and tap the big black power button. iOS will ask once: <em>"Allow AdHush to add VPN configurations?"</em> Tap Allow and authenticate with Face ID. You're done.</p>
+
+        <h3>Is it really a VPN? Will my data go through a server?</h3>
+        <p>No. AdHush runs a <strong>local-only</strong> VPN. The "tunnel" lives entirely on your phone — there is no remote server. The only outbound traffic is DNS queries forwarded to Cloudflare 1.1.1.1 (or your chosen resolver) for domains that are NOT on the blocklist.</p>
+
+        <h3>Does AdHush slow down my phone?</h3>
+        <p>No. DNS lookups are fast (~10 ms typical). Web traffic itself bypasses the AdHush tunnel entirely via <code>excludedRoutes</code> — only DNS is intercepted.</p>
+
+        <h2>Subscription &amp; trial</h2>
+        <h3>How does the 7-day free trial work?</h3>
+        <p>Apple charges nothing for the first 7 days. On day 7 it auto-charges $0.99 (or local equivalent) for the first month. You can cancel anytime during the trial and keep access until day 7 with no charge.</p>
+
+        <h3>How do I cancel?</h3>
+        <p>iOS Settings → Apple ID → Subscriptions → AdHush → Cancel Subscription. Or open AdHush → Settings → Manage subscription, which deep-links you to the same page.</p>
+
+        <h3>I bought it on another device — how do I restore?</h3>
+        <p>Open AdHush → Settings → Restore purchases. Or tap "Restore purchases" on the paywall.</p>
+
+        <h3>Can I share with my family?</h3>
+        <p>Yes. AdHush Premium supports <strong>Family Sharing</strong>. One subscription covers everyone in your Apple Family group.</p>
+
+        <h2>Troubleshooting</h2>
+        <h3>A website I need is broken when AdHush is on</h3>
+        <p>Some sites pull required content from domains that are also used for tracking. You can:</p>
+        <ul>
+            <li>Toggle AdHush off temporarily via the power button on the Home screen.</li>
+            <li>Add the domain to your local whitelist (Settings → Whitelist) in a future release.</li>
+            <li>Email us the URL — we curate the blocklist to minimize site-breakage.</li>
+        </ul>
+
+        <h3>The counter shows 0 even though blocking seems to work</h3>
+        <p>If you upgraded from a build before App Group registration completed, the tunnel can't write counters to shared storage. Open Settings → Manage subscription → uninstall and reinstall. If the issue persists, email us.</p>
+
+        <h3>iOS says "VPN configuration cannot be saved"</h3>
+        <p>Restart your iPhone. If the error persists, delete any existing AdHush VPN profile in iOS Settings → General → VPN &amp; Device Management, then enable from inside AdHush again.</p>
+
+        <h3>How do I know it's actually blocking?</h3>
+        <p>Run <a href="https://adblock-tester.com" target="_blank" rel="noopener">adblock-tester.com</a> on Safari with AdHush on. AdHush typically scores 90%+.</p>
+
+        <h2>Blocklist</h2>
+        <h3>Where does the blocklist come from?</h3>
+        <p>AdHush ships with a unified blocklist compiled from <a href="https://github.com/hagezi/dns-blocklists" target="_blank" rel="noopener">HaGeZi Multi-Pro</a>, <a href="https://oisd.nl" target="_blank" rel="noopener">OISD Big</a>, <a href="https://github.com/StevenBlack/hosts" target="_blank" rel="noopener">StevenBlack hosts</a>, and <a href="https://github.com/nextdns/native-tracking-domains" target="_blank" rel="noopener">NextDNS OEM tracking</a>. Around 520,000 unique domains, refreshed with each app update.</p>
+
+        <h3>Can I add my own rules?</h3>
+        <p>Not in v1. We're adding a custom-rules feature in a future release.</p>
+
+        <h2>Contact</h2>
+        <p>For anything not covered here:</p>
+        <p><a class="pill" href="mailto:yuganshjain11@gmail.com">Email support →</a></p>
+        <p class="muted">Reply time: 1–2 business days. Please include your iOS version and a brief description of the issue.</p>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+        </nav>
+    </main>
+</body>
+</html>
